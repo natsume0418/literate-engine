@@ -1,0 +1,40 @@
+/* ハンバーガーバー */
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+/* ハンバーガーバーが開いたときのスタイル */
+.bar.open:nth-child(1) {
+  transform: rotate(-45deg) translate(-7px, 5px);
+  width: 30px;
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(45deg) translate(-7px, -6.5px);
+  width: 30px;
+}
+
+/* メニューコンテナ */
+.menu {
+  @apply bg-gray-300  top-16 right-1/2 p-4 shadow-md z-10;
+}
+
+/* メニューアイテム */
+.menu-item {
+  @apply p-2 cursor-pointer border-b border-black;
+  /*border-top: 1px solid black;*/
+}
+
+/* メニューアイテムホバースタイル */
+.menu-item:hover {
+  @apply bg-gray-400;
+}
